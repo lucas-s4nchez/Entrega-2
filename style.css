@@ -21,7 +21,6 @@ body {
   /* background-image: url(img/black-370118_1280.png); */
   /* background-size: 100%; */
   background-color: #141414;
-  opacity: 0.9;
   background-repeat: no-repeat;
   top: 0;
   position: sticky;
@@ -47,17 +46,35 @@ body {
 .navbar__logo {
   color: #fff;
   font-family: "Caveat", cursive;
-  font-size: 6rem;
+  font-size: 4rem;
 }
-.navbar__logo-span {
-  color: #eec643;
+
+.navbar__logo::before {
+  content: "<";
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 6rem;
   font-weight: 700;
+  color: #eec643;
+}
+.navbar__logo::after {
+  content: "/>";
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #eec643;
 }
 .navbar__nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .navbar__link {
+  font-size: 1.2rem;
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
@@ -86,6 +103,7 @@ body {
 }
 @media (min-width: 768px) {
   .hero {
+    min-height: 80rem;
     background-image: linear-gradient(
         to left,
         rgb(0, 0, 0) 0,
