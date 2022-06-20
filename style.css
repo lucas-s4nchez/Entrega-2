@@ -313,7 +313,7 @@ img {
   gap: 1rem;
   justify-content: space-evenly;
 }
-@media (min-width: 576px) {
+@media (min-width: 375px) {
   .proyecto__botones {
     flex-direction: row;
   }
@@ -329,22 +329,26 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  border-radius: 2rem;
+  border-radius: 1rem;
+}
 
-  transition: transform 0.4s;
-}
-.btn:hover {
-  transform: scale(1.1);
-}
 .btn__icono {
   margin-left: 2rem;
 }
 .btn--sitio {
   color: #000;
   background-color: #0ead69;
+  transition: background-color 0.4s;
+}
+.btn--sitio:hover {
+  background-color: #0f965b;
 }
 .btn--github {
   background-color: #000;
+  transition: background-color 0.4s;
+}
+.btn--github:hover {
+  background-color: #121212;
 }
 @media (min-width: 768px) {
   .proyecto {
