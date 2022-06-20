@@ -320,6 +320,8 @@ img {
 }
 .btn {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: max-content;
   font-size: 1.4rem;
   padding: 1rem 1rem;
@@ -328,8 +330,7 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 2rem;
-  justify-content: space-around;
-  align-items: center;
+
   transition: transform 0.4s;
 }
 .btn:hover {
