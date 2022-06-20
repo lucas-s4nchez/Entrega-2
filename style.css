@@ -249,7 +249,7 @@ img {
   text-align: center;
   align-items: center;
   color: #fff;
-  border-bottom: solid 4px transparent;
+  border-bottom: solid 5px transparent;
   transition: all 0.5s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
