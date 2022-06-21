@@ -34,7 +34,7 @@ img {
 
 /*!Header*/
 .header {
-  background-color: #141414;
+  background-color: #141414ef;
   background-repeat: no-repeat;
   top: 0;
   position: sticky;
@@ -83,6 +83,12 @@ img {
   max-width: 100%;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .navbar__nav {
+    margin-bottom: 0;
+  }
 }
 .navbar__link {
   font-size: 1.2rem;
@@ -388,17 +394,32 @@ img {
   text-decoration: none;
   color: #fff;
 }
+.fa-facebook {
+  transition: color 0.4s;
+}
 .fa-facebook:hover {
   color: #1877f2;
+}
+.fa-instagram {
+  transition: color 0.4s;
 }
 .fa-instagram:hover {
   color: #ff005d;
 }
+.fa-envelope {
+  transition: color 0.4s;
+}
 .fa-envelope:hover {
   color: #d93025;
 }
+.fa-linkedin {
+  transition: color 0.4s;
+}
 .fa-linkedin:hover {
   color: #0a66c2;
+}
+.fa-whatsapp {
+  transition: color 0.4s;
 }
 .fa-whatsapp:hover {
   color: #00e676;
