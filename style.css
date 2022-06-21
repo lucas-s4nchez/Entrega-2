@@ -328,6 +328,7 @@ img {
 
 .btn__icono {
   margin-left: 1rem;
+  font-size: 1.8rem;
 }
 .btn--sitio {
   color: #000;
@@ -362,4 +363,43 @@ img {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
+}
+
+/*! Contacto*/
+.contacto {
+  margin-block: 3rem;
+}
+.contacto__heading {
+  color: #fff;
+  text-align: center;
+  font-size: 3.4rem;
+  line-height: 2;
+  border-top: ridge 2px #ffff00;
+  margin-bottom: 4rem;
+}
+.contactos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 3rem;
+  justify-content: center;
+}
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+.fa-facebook:hover {
+  color: #1877f2;
+}
+.fa-instagram:hover {
+  color: #ff005d;
+}
+.fa-envelope:hover {
+  color: #d93025;
+}
+.fa-linkedin:hover {
+  color: #0a66c2;
+}
+.fa-whatsapp:hover {
+  color: #00e676;
 }
