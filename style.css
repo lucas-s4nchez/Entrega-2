@@ -8,9 +8,17 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@font-face {
+  font-family: "logo";
+  src: url(/fonts/Caveat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "principal";
+  src: url(/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
 body {
   font-size: 1.6rem;
-  font-family: "Kalam", cursive;
+  font-family: "principal";
   background-color: #141414;
 }
 img {
@@ -48,7 +56,7 @@ img {
 }
 .navbar__logo {
   color: #fff;
-  font-family: "Caveat", cursive;
+  font-family: "logo";
   font-size: 4rem;
 }
 
@@ -159,16 +167,13 @@ img {
 }
 .sobre-mi__contenido {
   color: #fff;
-
   text-align: center;
 }
 .sobre-mi__heading {
-  display: block;
-  width: max-content;
-  margin: 0 auto;
-  font-size: 4.4rem;
-  line-height: 1.2;
-  border-bottom: ridge 5px #ffff00;
+  text-align: center;
+  font-size: 3.4rem;
+  line-height: 2;
+  border-top: ridge 2px #ffff00;
   margin-bottom: 4rem;
 }
 
@@ -177,33 +182,26 @@ img {
 }
 
 .tecnologias__heading {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   color: #fff;
   margin-block: 4rem;
 }
 .tecnologias__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  place-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-@media (min-width: 768px) {
-  .tecnologias__grid {
-    grid-template-columns: repeat(8, 1fr);
-  }
-}
+
 .tecnologia {
   margin: 0 auto;
   padding: 1rem;
-  max-width: 10rem;
+  max-width: 6rem;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
-  border-top: solid 1px rgb(255, 255, 255);
-  border-left: solid 1px rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   backdrop-filter: blur(6px);
   transition: transform 0.3s;
@@ -233,12 +231,10 @@ img {
 }
 .servicios__heading {
   color: #fff;
-  display: block;
-  width: max-content;
-  margin: 0 auto;
-  font-size: 4.4rem;
-  line-height: 1.2;
-  border-bottom: ridge 5px #ffff00;
+  text-align: center;
+  font-size: 3.4rem;
+  line-height: 2;
+  border-top: ridge 2px #ffff00;
   margin-bottom: 4rem;
 }
 .servicio {
@@ -263,12 +259,10 @@ img {
 /*! Proyectos*/
 .proyectos__heading {
   color: #fff;
-  display: block;
-  width: max-content;
-  margin: 0 auto;
-  font-size: 4.4rem;
-  line-height: 1.2;
-  border-bottom: ridge 5px #ffff00;
+  text-align: center;
+  font-size: 3.4rem;
+  line-height: 2;
+  border-top: ridge 2px #ffff00;
   margin-bottom: 4rem;
 }
 .proyectos__grid {
