@@ -34,7 +34,7 @@ img {
 
 /*!Header*/
 .header {
-  background-color: #141414ef;
+  background-color: #070707fb;
   background-repeat: no-repeat;
   top: 0;
   position: sticky;
@@ -156,13 +156,22 @@ img {
 }
 .hero__heading {
   font-weight: 700;
-  font-size: 4.4rem;
+  font-size: 2.6rem;
+  color: #00e676;
 }
 .hero__descripcion {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .hero__descripcion--nombre {
   color: #ffff00;
+}
+@media (min-width: 768px) {
+  .hero__heading {
+    font-size: 3.6rem;
+  }
+  .hero__descripcion {
+    font-size: 2.4rem;
+  }
 }
 
 /*!Sobre mi*/
@@ -423,4 +432,24 @@ img {
 }
 .fa-whatsapp:hover {
   color: #00e676;
+}
+/*! Footer*/
+.footer {
+  background-color: #070707;
+  padding: 2rem 0;
+  text-align: center;
+}
+.navbar__logo--pequeño {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+.navbar__logo--pequeño::before {
+  font-size: 3rem;
+}
+.navbar__logo--pequeño::after {
+  font-size: 3rem;
+}
+.footer__texto {
+  text-transform: capitalize;
+  color: #fff;
 }
