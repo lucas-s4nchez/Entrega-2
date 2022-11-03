@@ -64,7 +64,7 @@ img {
   width: 100vw;
   margin: 0;
   background-color: #070707fb;
-  transform: translateY(120%);
+  transform: translateY(-120%);
   transition: 0.3s;
 }
 
