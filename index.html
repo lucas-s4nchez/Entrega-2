@@ -62,6 +62,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffff00">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -72,17 +73,25 @@
   </span>
   <header class="header">
     <div class="navbar contenedor">
-      <p class="navbar__logo">Lucas</p>
+      <div class="navbar__logo">
+        <img class="navbar__logo-img" src="./img/2-removebg-preview.png" alt="logo">
+      </div>
       <nav class="navbar__nav">
-        <a class="navbar__link" href="#">Inicio</a>
-        <a class="navbar__link" href="#sobremi">Sobre Mi</a>
-        <a class="navbar__link" href="#servicios">Servicios</a>
-        <a class=" navbar__link" href="#proyectos">Proyectos</a>
-        <a class="navbar__link" href="#contacto">Contacto</a>
-
+        <ul id="menu" class="navbar__ul">
+          <a class="navbar__link" href="#">Inicio</a>
+          <a class="navbar__link" href="#sobremi">Sobre Mi</a>
+          <a class="navbar__link" href="#proyectos">Proyectos</a>
+          <a class="navbar__link" href="#contacto">Contacto</a>
+        </ul>
+        <button class="navbar__hamburger hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </nav>
     </div>
   </header>
+
   <section class="hero">
     <div class="hero__contenido contenedor">
 
@@ -90,22 +99,24 @@
 
 
       <div class="hero__texto">
-        <h1 class="hero__heading">
-          < Desarrollador web Full Stack />
-        </h1>
-        <p class="hero__descripcion">¡Hola! mi nombre es <span class="hero__descripcion--nombre">Lucas Sánchez</span>
-        </p>
+
+        <div id="typed-strings">
+          <p class="hero__heading">Hola! mi nombre es Lucas, <br> soy un desarrollador <b
+              class="hero__heading--nombre ">frontend</b></p>
+        </div>
+        <span class="typed"></span>
       </div>
     </div>
   </section>
   <section id="sobremi" class="sobre-mi">
     <div class="sobre-mi__contenido contenedor">
       <h2 class="sobre-mi__heading">Sobre mí</h2>
-      <p class="sobre-mi__texto">Soy un estudiante del Coding Bootcamp de Nucba,
+      <p class="sobre-mi__p">Soy un estudiante del Coding Bootcamp de Nucba,
         comprometido en aprender
         sobre nuevas tendencias y conceptos sobre el desarrollo web. Busco mi primer experiencia como profesional,
         para ayudar a empresas del sector IT, contribuyendo con mis
-        habilidades en Javascript, React y Node para lograr diseños finales que satisfagan las necesidades y
+        habilidades en <span class="sobre-mi__span">html, css y javascript</span>, para lograr diseños finales que
+        satisfagan las necesidades y
         preferencias
         de
         los
@@ -133,16 +144,12 @@
           <h3 class="tecnologia__texto">Sass</h3>
         </div>
         <div class="tecnologia">
-          <img class="tecnologia__imagen" src="img/react.svg" alt="imagen react">
-          <h3 class="tecnologia__texto">React</h3>
+          <img class="tecnologia__imagen" src="img/bootstrap.svg" alt="imagen bootstrap">
+          <h3 class="tecnologia__texto">Bootstrap</h3>
         </div>
         <div class="tecnologia">
-          <img class="tecnologia__imagen" src="img/nodejs-icon.svg" alt="imagen nodejs">
-          <h3 class="tecnologia__texto">Node.js</h3>
-        </div>
-        <div class="tecnologia">
-          <img class="tecnologia__imagen" src="img/git-icon.svg" alt="imagen git">
-          <h3 class="tecnologia__texto">Git</h3>
+          <img class="tecnologia__imagen" src="img/tailwindcss-icon.svg" alt="imagen tailwind">
+          <h3 class="tecnologia__texto">Tailwind</h3>
         </div>
         <div class="tecnologia">
           <img class="tecnologia__imagen" src="img/github-icon.svg" alt="imagen github">
@@ -151,87 +158,26 @@
       </div>
     </div>
   </section>
-  <section id="servicios" class="servicios contenedor">
-    <h2 class="servicios__heading">Servicios</h2>
-    <div class="servicios__grid">
-      <div class="servicio">
-        <h3 class="servicio__heading">Desarrollo</h3>
-        <svg class="servicio__imagen" xmlns="http://www.w3.org/2000/svg" class="iconos" height="8rem"
-          viewBox="0 0 24 24" width="8rem" fill="#FFFFFF">
-          <path d="M0 0h24v24H0V0z" fill="none" />
-          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
-        </svg>
-        <p>No se preocupe por crear un sitio. Puedo hacer para usted su negocio digital para que pueda concentrarse en
-          lo
-          que es importante</p>
-      </div>
-      <div class="servicio">
-        <h3 class="servicio__heading">Diseño Adaptable</h3>
-        <svg class="servicio__imagen" xmlns="http://www.w3.org/2000/svg" height="8rem" viewBox="0 0 24 24" width="8rem"
-          fill="#FFFFFF">
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z" />
-        </svg>
-        <p>Diseños 100% adaptables a distintos dispositivos. Incluyendo Computadoras de escritorio, tablets y telefonos
-          celulares </p>
-      </div>
-      <div class="servicio">
-        <h3 class="servicio__heading">Diseños creativos</h3>
-        <svg class="servicio__imagen" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="8rem"
-          viewBox="0 0 24 24" width="8rem" fill="#FFFFFF">
-          <g>
-            <rect fill="none" height="24" width="24" />
-          </g>
-          <g>
-            <g>
-              <path
-                d="M16.24,11.51l1.57-1.57l-3.75-3.75l-1.57,1.57L8.35,3.63c-0.78-0.78-2.05-0.78-2.83,0l-1.9,1.9 c-0.78,0.78-0.78,2.05,0,2.83l4.13,4.13L3,17.25V21h3.75l4.76-4.76l4.13,4.13c0.95,0.95,2.23,0.6,2.83,0l1.9-1.9 c0.78-0.78,0.78-2.05,0-2.83L16.24,11.51z M9.18,11.07L5.04,6.94l1.89-1.9c0,0,0,0,0,0l1.27,1.27L7.02,7.5l1.41,1.41l1.19-1.19 l1.45,1.45L9.18,11.07z M17.06,18.96l-4.13-4.13l1.9-1.9l1.45,1.45l-1.19,1.19l1.41,1.41l1.19-1.19l1.27,1.27L17.06,18.96z" />
-              <path
-                d="M20.71,7.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34c-0.47-0.47-1.12-0.29-1.41,0l-1.83,1.83l3.75,3.75L20.71,7.04z" />
-            </g>
-            <g />
-          </g>
-        </svg>
-        <p>Un diseño atractivo te ayudara a ganar clientes y mantener los que ya tienes, tu sitio es la cara digital de
-          tu negocio </p>
-      </div>
-      <div class="servicio">
-        <h3 class="servicio__heading">Posicionamiento SEO</h3>
-        <svg class="servicio__imagen" xmlns="http://www.w3.org/2000/svg" height="8rem" viewBox="0 0 24 24" width="8rem"
-          fill="#FFFFFF">
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
-        </svg>
-        <p>Puedo optimizar tu sitio con estrategias de posicionamiento en navegadores, para generar mas tráfico en tu
-          web</p>
-      </div>
-    </div>
-  </section>
   <section id="proyectos" class="proyectos contenedor">
     <h2 class="proyectos__heading">Mis Proyectos</h2>
     <div class="proyectos__grid contenedor">
       <div class="proyecto">
         <div class="proyecto__imagen">
-          <img class="imagen" src="img/Captura de pantalla 2022-06-20 152618.png" alt="imagen de proyecto">
+          <img class="imagen" src="img/clima-app.png" alt="imagen de proyecto">
         </div>
         <div class="proyecto__descripcion">
-          <h3 class="proyecto__titulo">Pagina </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, impedit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis reprehenderit sapiente esse
-          </p>
           <p>Tecnologias usadas: </p>
           <div class="proyectos__tecnologias">
             <img src="img/317755_badge_html_html5_achievement_award_icon.svg" width="24px" alt="icono html5">
             <img src="img/css-3_official.svg" width="24px" alt="icono css">
+            <img src="img/javascript.svg" width='24px' alt="icono javascript">
 
           </div>
           <div class="proyecto__botones">
-            <a class="btn btn--sitio" href="https://pricing-card-nine.vercel.app/" target="_blank">Ver Sitio
+            <a class="btn btn--sitio" href="https://clima-app-t2id.vercel.app/" target="_blank">Ver Sitio
               <i class="fa-solid fa-arrow-up-right-from-square btn__icono"></i>
             </a>
-            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/Pricing-card" target="_blank">Repositorio
+            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/ClimaApp" target="_blank">Repositorio
               <i class="fa-brands fa-github btn__icono"></i>
             </a>
           </div>
@@ -239,24 +185,22 @@
       </div>
       <div class="proyecto">
         <div class="proyecto__imagen">
-          <img class="imagen" src="img/Captura de pantalla 2022-06-20 155008.png" alt="imagen de proyecto">
+          <img class="imagen" src="img/gifs-app.png" alt="imagen de proyecto">
         </div>
         <div class="proyecto__descripcion">
-          <h3 class="proyecto__titulo">Pagina </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, impedit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis reprehenderit sapiente esse
-          </p>
+
           <p>Tecnologias usadas: </p>
           <div class="proyectos__tecnologias">
             <img src="img/317755_badge_html_html5_achievement_award_icon.svg" width="24px" alt="icono html5">
-            <img src="img/css-3_official.svg" width="24px" alt="icono css">
-
+            <img src="img/bootstrap.svg" width="24px" alt="icono bootstrap">
+            <img src="img/react.svg" width="24px" alt="icono react">
           </div>
           <div class="proyecto__botones">
-            <a class="btn btn--sitio" href="https://tienda-mueble.vercel.app/" target="_blank">Ver Sitio
+            <a class="btn btn--sitio" href="https://gifs-app-react.vercel.app/" target="_blank">Ver Sitio
               <i class="fa-solid fa-arrow-up-right-from-square btn__icono"></i>
             </a>
-            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/tienda-mueble" target="_blank">Repositorio
+            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/gifs-app-react"
+              target="_blank">Repositorio
               <i class="fa-brands fa-github btn__icono"></i>
             </a>
           </div>
@@ -264,17 +208,39 @@
       </div>
       <div class="proyecto">
         <div class="proyecto__imagen">
-          <img class="imagen" src="img/Captura de pantalla 2022-06-20 161237.png" alt="imagen de proyecto">
+          <img class="imagen" src="img/todo-app.png" alt="imagen de proyecto">
         </div>
         <div class="proyecto__descripcion">
-          <h3 class="proyecto__titulo">Pagina </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, impedit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis reprehenderit sapiente esse
-          </p>
+
+          <p>Tecnologias usadas: </p>
+          <div class="proyectos__tecnologias">
+            <img src="img/317755_badge_html_html5_achievement_award_icon.svg" width="24px" alt="icono html5">
+            <img src="img/bootstrap.svg" width="24px" alt="icono bootstrap">
+            <img src="img/react.svg" width="24px" alt="icono react">
+          </div>
+          <div class="proyecto__botones">
+            <a class="btn btn--sitio" href="https://todo-react-app-taupe-omega.vercel.app/" target="_blank">Ver
+              Sitio
+              <i class="fa-solid fa-arrow-up-right-from-square btn__icono"></i>
+            </a>
+            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/Todo-react-app"
+              target="_blank">Repositorio
+              <i class="fa-brands fa-github btn__icono"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="proyecto">
+        <div class="proyecto__imagen">
+          <img class="imagen" src="img/guitarLA.png" alt="imagen de proyecto">
+        </div>
+        <div class="proyecto__descripcion">
+
           <p>Tecnologias usadas: </p>
           <div class="proyectos__tecnologias">
             <img src="img/317755_badge_html_html5_achievement_award_icon.svg" width="24px" alt="icono html5">
             <img src="img/css-3_official.svg" width="24px" alt="icono css">
+
           </div>
           <div class="proyecto__botones">
             <a class="btn btn--sitio" href="https://guitar-la-fawn.vercel.app/" target="_blank">Ver Sitio
@@ -289,76 +255,22 @@
       </div>
       <div class="proyecto">
         <div class="proyecto__imagen">
-          <img class="imagen" src="img/Captura de pantalla 2022-06-20 170254.png" alt="imagen de proyecto">
+          <img class="imagen" src="img/yury.png" alt="imagen de proyecto">
         </div>
         <div class="proyecto__descripcion">
-          <h3 class="proyecto__titulo">Pagina </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, impedit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis reprehenderit sapiente esse
-          </p>
+
           <p>Tecnologias usadas: </p>
           <div class="proyectos__tecnologias">
             <img src="img/317755_badge_html_html5_achievement_award_icon.svg" width="24px" alt="icono html5">
             <img src="img/css-3_official.svg" width="24px" alt="icono css">
-            <img src="img/sass.svg" width="24px" alt="icono sass">
+
           </div>
           <div class="proyecto__botones">
-            <a class="btn btn--sitio" href="https://effortless-sfogliatella-0469a5.netlify.app/" target="_blank">Ver
-              Sitio
+            <a class="btn btn--sitio" href="https://yury.vercel.app/" target="_blank">Ver Sitio
               <i class="fa-solid fa-arrow-up-right-from-square btn__icono"></i>
             </a>
-            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/sitio-delivery"
+            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/Proyecto-Integrador"
               target="_blank">Repositorio
-              <i class="fa-brands fa-github btn__icono"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="proyecto">
-        <div class="proyecto__imagen">
-          <img class="imagen" src="img/Captura de pantalla 2022-06-20 171750.png" alt="imagen de proyecto">
-        </div>
-        <div class="proyecto__descripcion">
-          <h3 class="proyecto__titulo">Pagina </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, impedit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pplicabo perferendis reprehenderit sapiente esse
-          </p>
-          <p>Tecnologias usadas: </p>
-          <div class="proyectos__tecnologias">
-            <img src="img/317755_badge_html_html5_achievement_award_icon.svg" width="24px" alt="icono html5">
-            <img src="img/css-3_official.svg" width="24px" alt="icono css">
-
-          </div>
-          <div class="proyecto__botones">
-            <a class="btn btn--sitio" href="https://tech-pro.vercel.app/" target="_blank">Ver Sitio
-              <i class="fa-solid fa-arrow-up-right-from-square btn__icono"></i>
-            </a>
-            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/TechPRO" target="_blank">Repositorio
-              <i class="fa-brands fa-github btn__icono"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="proyecto">
-        <div class="proyecto__imagen">
-          <img class="imagen" src="img/Captura de pantalla 2022-06-20 171004.png" alt="imagen de proyecto">
-        </div>
-        <div class="proyecto__descripcion">
-          <h3 class="proyecto__titulo">Pagina </h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, impedit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo perferendis reprehenderit sapiente esse
-          </p>
-          <p>Tecnologias usadas: </p>
-          <div class="proyectos__tecnologias">
-            <img src="img/317755_badge_html_html5_achievement_award_icon.svg" width="24px" alt="icono html5">
-            <img src="img/css-3_official.svg" width="24px" alt="icono css">
-
-          </div>
-          <div class="proyecto__botones">
-            <a class="btn btn--sitio" href="https://nucleus-self.vercel.app/" target="_blank">Ver Sitio
-              <i class="fa-solid fa-arrow-up-right-from-square btn__icono"></i>
-            </a>
-            <a class="btn btn--github" href="https://github.com/lucas-s4nchez/nucleus" target="_blank">Repositorio
               <i class="fa-brands fa-github btn__icono"></i>
             </a>
           </div>
@@ -371,34 +283,35 @@
   </section>
   <section id="contacto" class="contacto contenedor">
     <h2 class="contacto__heading">Contacto</h2>
-    <div class="contactos">
-      <a class="link" href="https://es-la.facebook.com/" target="_blank">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-      <a class="link" href="https://www.instagram.com/" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a class="link" href="mailto:lucassanchezdl@gmail.com" target="_blank">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a class="link" href="https://ar.linkedin.com/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a class="link" href="https://web.whatsapp.com/" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-
-    </div>
+    <form class="form" id="form" action="https://getform.io/f/ac399580-80ea-4307-9cae-35c4ee1d5e4a" method="POST"
+      novalidate>
+      <div class="form__field">
+        <input class="form__email" type="email" name="email" id="email" placeholder="Email">
+        <small></small>
+      </div>
+      <div class="form__field">
+        <textarea class="form__message" name="message" id="message" cols="30" rows="10"
+          placeholder="Mensaje"></textarea>
+        <small></small>
+      </div>
+      <button class="btn btn--sitio btn--submit" id="btn-submit">Enviar</button>
+    </form>
 
   </section>
   <footer class="footer">
     <div class=" contenedor">
-      <p class="footer__texto"><span class="navbar__logo navbar__logo--pequeño">Lucas</span> todos los derechos
-        reservados &copy;</p>
+      <div class="footer__texto">
+        <img class="footer__logo-img" src="./img/2-removebg-preview.png" alt="">
+        <p>Diseñado y desarrollado por <a class="footer__link" href="https://github.com/lucas-s4nchez"
+            target="_blank">Lucas
+            Sánchez</a></p>
+      </div>
     </div>
   </footer>
 
   <script src="https://kit.fontawesome.com/96e4c6db82.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
